@@ -43,10 +43,10 @@
 
     <main class="flex-grow relative z-10">
         <div class="tabs-content active" id="accueil">
-            <section class="hero text-white py-24 px-4">
+            <section class="hero text-white py-24 px-4 relative overflow-hidden">
                 <div class="container mx-auto text-center">
                     <h2 class="text-5xl font-bold mb-6 leading-tight" style="font-family: 'Montserrat', sans-serif;">Maîtrisez l'Informatique à Votre Rythme</h2>
-                    <p class="text-2xl mb-10" style="font-family: 'Montserrat', sans-serif;">Des cours individuels conçus pour tous les niveaux.</p>
+                    <p class="text-2xl mb-10" style="font-family: 'Montserrat', sans-serif;">Des cours particuliers pour tous, débutants ou confirmés.</p>
                     <button class="bg-teal-500 text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-teal-600 transition-colors duration-300 shadow-lg" data-scroll-to="inscription">
                         <i class="fas fa-rocket mr-3"></i> Inscrivez-vous !
                     </button>
@@ -57,26 +57,49 @@
                 <div class="container mx-auto">
                     <h3 class="text-4xl font-bold text-center mb-16 text-white" style="font-family: 'Montserrat', sans-serif;">Pourquoi Choisir Nos Cours ?</h3>
                     <div class="card-container grid grid-cols-1 md:grid-cols-3 gap-12">
-                        <div class="feature-card glass-effect">
+                        <div class="feature-card glass-effect" data-tilt>
                             <div class="card-content">
                                 <i class="fas fa-user text-teal-400 text-6xl mb-6"></i>
                                 <h4 class="text-3xl font-bold mb-4 text-white" style="font-family: 'Montserrat', sans-serif;">Accompagnement Individuel</h4>
-                                <p class="text-gray-300 text-center" style="font-family: 'Montserrat', sans-serif;">Un suivi personnalisé et adapté à vos besoins spécifiques.</p>
+                                <p class="text-gray-300 text-center" style="font-family: 'Montserrat', sans-serif;">Un suivi personnalisé et adapté à vos besoins spécifiques pour garantir une progression optimale.</p>
                             </div>
                         </div>
-                        <div class="feature-card glass-effect">
+                        <div class="feature-card glass-effect" data-tilt>
                             <div class="card-content">
                                 <i class="fas fa-clock text-teal-400 text-6xl mb-6"></i>
                                 <h4 class="text-3xl font-bold mb-4 text-white" style="font-family: 'Montserrat', sans-serif;">Flexibilité des Horaires</h4>
-                                <p class="text-gray-300 text-center" style="font-family: 'Montserrat', sans-serif;">Des sessions de cours adaptées à votre emploi du temps.</p>
+                                <p class="text-gray-300 text-center" style="font-family: 'Montserrat', sans-serif;">Des sessions de cours adaptées à votre emploi du temps pour un apprentissage sans contraintes.</p>
                             </div>
                         </div>
-                        <div class="feature-card glass-effect">
+                        <div class="feature-card glass-effect" data-tilt>
                             <div class="card-content">
                                 <i class="fas fa-book-open text-teal-400 text-6xl mb-6"></i>
                                 <h4 class="text-3xl font-bold mb-4 text-white" style="font-family: 'Montserrat', sans-serif;">Approche Pratique</h4>
-                                <p class="text-gray-300 text-center" style="font-family: 'Montserrat', sans-serif;">Des exercices concrets pour une mise en pratique immédiate.</p>
+                                <p class="text-gray-300 text-center" style="font-family: 'Montserrat', sans-serif;">Des exercices concrets et une mise en pratique immédiate pour une assimilation efficace des connaissances.</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="avantages py-20 px-4 bg-gray-800 bg-opacity-50">
+                <div class="container mx-auto">
+                    <h3 class="text-4xl font-bold text-center mb-16 text-white" style="font-family: 'Montserrat', sans-serif;">Les Avantages de nos Cours</h3>
+                    <div class="avantages-list">
+                        <div class="avantage-item glass-effect" data-tilt>
+                            <i class="fas fa-check-circle text-teal-400 text-4xl"></i>
+                            <h4 class="text-2xl font-bold my-4 text-white" style="font-family: 'Montserrat', sans-serif;">Expertise Pédagogique</h4>
+                            <p class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Des formateurs expérimentés et passionnés, qui maîtrisent l'art de transmettre leurs connaissances avec clarté et efficacité.</p>
+                        </div>
+                        <div class="avantage-item glass-effect" data-tilt>
+                            <i class="fas fa-check-circle text-teal-400 text-4xl"></i>
+                            <h4 class="text-2xl font-bold my-4 text-white" style="font-family: 'Montserrat', sans-serif;">Contenu de Cours Actualisé</h4>
+                            <p class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Des programmes constamment mis à jour pour refléter les dernières évolutions technologiques et logicielles.</p>
+                        </div>
+                        <div class="avantage-item glass-effect" data-tilt>
+                            <i class="fas fa-check-circle text-teal-400 text-4xl"></i>
+                            <h4 class="text-2xl font-bold my-4 text-white" style="font-family: 'Montserrat', sans-serif;">Support Post-Formation</h4>
+                            <p class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Un accompagnement qui se poursuit même après la fin de votre formation, pour vous aider à consolider vos acquis.</p>
                         </div>
                     </div>
                 </div>
@@ -185,7 +208,6 @@
                         <div id="inscription-message" class="mt-4 text-green-500 font-bold hidden" style="font-family: 'Montserrat', sans-serif;">
                             <i class="fas fa-check-circle mr-2"></i> Inscription réussie !
                         </div>
-                        </div>
                         <div id="inscription-error" class="mt-4 text-red-500 font-bold hidden" style="font-family: 'Montserrat', sans-serif;">
                             <i class="fas fa-exclamation-triangle mr-2"></i> Erreur lors de l'inscription. Veuillez réessayer.
                         </div>
@@ -198,7 +220,7 @@
             <div class="container mx-auto">
                 <h2 class="text-3xl font-bold text-center mb-8 text-white" style="font-family: 'Montserrat', sans-serif;">Nos Services</h2>
                 <div class="grid grid-cols-1 md:grid-cols-1 gap-10">
-                    <div class="glass-effect p-8 rounded-3xl flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl">
+                    <div class="glass-effect p-8 rounded-3xl flex flex-col items-center">
                         <i class="fas fa-user text-teal-400 text-5xl mb-4"></i>
                         <h3 class="text-2xl font-bold mb-4 text-white" style="font-family: 'Montserrat', sans-serif;">Cours Individuels</h3>
                         <p class="text-gray-300 mb-4" style="font-family: 'Montserrat', sans-serif;">Bénéficiez d'un accompagnement personnalisé et avancez à votre propre rythme.</p>
@@ -216,7 +238,7 @@
             <div class="container mx-auto">
                 <h2 class="text-3xl font-bold text-center mb-8 text-white" style="font-family: 'Montserrat', sans-serif;">Nos Tarifs</h2>
                 <div class="grid grid-cols-1 md:grid-cols-1 gap-10">
-                    <div class="glass-effect p-8 rounded-3xl flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl">
+                    <div class="glass-effect p-8 rounded-3xl flex flex-col items-center">
                         <i class="fas fa-user text-teal-400 text-5xl mb-4"></i>
                         <h3 class="text-2xl font-bold mb-4 text-white" style="font-family: 'Montserrat', sans-serif;">Cours Individuels</h3>
                         <p class="text-white font-bold text-2xl mb-2" style="font-family: 'Montserrat', sans-serif;">40€ / heure</p>
@@ -233,7 +255,7 @@
             <p class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">&copy; 2023 Cours d'Informatique Montana-Village | <a href="#" class="text-teal-400 hover:underline">Mentions légales</a></p>
         </div>
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
