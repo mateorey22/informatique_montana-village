@@ -42,8 +42,7 @@ form.addEventListener('submit', (event) => {
             vendredi: document.getElementById('vendredi').checked
         },
         plageHoraire: document.getElementById('plageHoraire').value,
-        remarques: document.getElementById('remarques').value
-    };
+        remarques};
 
     // Enregistrement des données dans un fichier texte (côté serveur)
     fetch('enregistrer_inscription.php', {
@@ -90,21 +89,66 @@ if (inscriptionButton) {
 const backgroundAnimation = document.getElementById('background-animation');
 
 function createBubble() {
-  const bubble = document.createElement('div');
-  bubble.classList.add('bubble');
-  const size = Math.random() * 60 + 20; // Taille entre 20px et 80px
-  bubble.style.width = `${size}px`;
-  bubble.style.height = `${size}px`;
-  bubble.style.left = `${Math.random() * 100}%`;
-  bubble.style.animationDuration = `${Math.random() * 4 + 6}s`; // Durée entre 6s et 10s
-  bubble.style.animationDelay = `${Math.random() * 5}s`; // Délai entre 0s et 5s
-  backgroundAnimation.appendChild(bubble);
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
+    const size = Math.random() * 60 + 20; // Taille entre 20px et 80px
+    const animationDuration = Math.random() * 4 + 6; // Durée entre 6s et 10s
+    const animationDelay = Math.random() * 5; // Délai entre 0s et 5s
 
-  // Supprimer la bulle après son animation
-  bubble.addEventListener('animationend', () => {
-    bubble.remove();
-  });
+    // Générer des valeurs aléatoires pour le mouvement et l'échelle
+    const moveX = (Math.random() - 0.5) * 40;
+    const moveY = (Math.random() - 0.5) * 40;
+    const scale = 0.5 + Math.random() * 0.5; // Échelle entre 0.5 et 1
+
+    bubble.style.cssText = `
+        width: ${size}px;
+        height: ${size}px;
+        left: ${Math.random() * 100}%;
+        animation-duration: ${animationDuration}s;
+        animation-delay: ${animationDelay}s;
+        --move-x: ${moveX}px;
+        --move-y: ${moveY}px;
+        --scale: ${scale};
+    `;
+
+    backgroundAnimation.appendChild(bubble);
+
+    // Supprimer la bulle après son animation
+    bubble.addEventListener('animationend', () => {
+        bubble.remove();
+    });
 }
 
 // Créer des bulles périodiquement
-setInterval(createBubble, 1000);
+for (let i = 0; i < 10; i++) {
+    createBubble();
+}
+
+// Mettre à jour la position des bulles en fonction de la position de la souris
+backgroundAnimation.addEventListener('mousemove', (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+    const viewportCenterX = window.innerWidth / 2;
+    const viewportCenterY = window.innerHeight / 2;
+    const mouseFromCenterX = x - viewportCenterX;
+    const mouseFromCenterY = y - viewportCenterY;
+
+    const bubbles = document.querySelectorAll('.bubble');
+    bubbles.forEach(bubble => {
+        // Facteur de mouvement basé sur la distance au centre
+        const moveFactorX = mouseFromCenterX * 0.01; // Ajustez la valeur pour modifier l'effet
+        const moveFactorY = mouseFromCenterY * 0.01; // Ajustez la valeur pour modifier l'effet
+
+        bubble.style.transform = `translate(${moveFactorX}px, ${moveFactorY}px)`;
+    });
+});
+
+// Effet 3D avec Vanilla-tilt.js
+VanillaTilt.init(document.querySelectorAll(".feature-card, .avantage-item"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2,
+    gyroscope: false,
+    scale: 1.05
+});
