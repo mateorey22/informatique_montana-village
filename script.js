@@ -14,8 +14,8 @@ tabs.forEach(tab => {
     });
 });
 
-// Affiche l'onglet inscription par défaut
-document.querySelector('.tab[data-target="inscription"]').click();
+// Affiche l'onglet accueil par défaut
+document.querySelector('.tab[data-target="accueil"]').click();
 
 
 form.addEventListener('submit', (event) => {
@@ -47,3 +47,12 @@ form.addEventListener('submit', (event) => {
     console.log('Formulaire soumis:', formData);
     // Ici, vous pouvez envoyer les données à un serveur avec fetch() ou XMLHttpRequest
 });
+
+// Animation au scroll pour le bouton d'inscription de la page d'accueil
+const inscriptionButton = document.querySelector('[data-scroll-to="inscription"]');
+if (inscriptionButton) {
+    inscriptionButton.addEventListener('click', () => {
+        document.querySelector('.tab[data-target="inscription"]').click(); // Change d'onglet
+        document.getElementById('inscription').scrollIntoView({ behavior: 'smooth' }); // Scrolle vers la section
+    });
+}
