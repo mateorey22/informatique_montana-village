@@ -1,12 +1,11 @@
 /* Styles spécifiques, complétant Tailwind CSS */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Source Serif Pro', serif;
 }
 
 .tabs-list {
@@ -22,8 +21,8 @@ h1, h2, h3, h4 {
 }
 
 .tab.active {
-    border-color: #20c997; /* Teal-400 */
-    color: #20c997;
+    border-color: #3b82f6; /* Blue-500 */
+    color: #3b82f6;
 }
 
 .tabs-content {
@@ -50,23 +49,24 @@ h1, h2, h3, h4 {
 .select {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 1px solid #374151; /* Gray-700 */
-    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
     font-size: 1rem;
     margin-top: 0.25rem;
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .input:focus,
 .textarea:focus,
 .select:focus {
     outline: none;
-    border-color: #20c997; /* Teal-400 */
-    box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.5); /* Teal-400 with opacity */
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
 }
 
-.form-checkbox, .form-radio {
+.form-checkbox, 
+.form-radio {
     border-radius: 0.25rem;
 }
 
@@ -98,10 +98,31 @@ h1, h2, h3, h4 {
 .hero {
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 10;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(3px);
+    z-index: 0;
 }
 
 .card-container {
     perspective: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .feature-card {
@@ -109,10 +130,14 @@ h1, h2, h3, h4 {
     transform-style: preserve-3d;
     position: relative;
     border-radius: 1.5rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
+
 .feature-card:hover {
     transform: rotateY(15deg);
-    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.2);
 }
 
 .card-content {
@@ -124,12 +149,13 @@ h1, h2, h3, h4 {
     z-index: 2;
 }
 
-.feature-card:hover .card-content {
-    transform: rotateY(15deg);
-}
-
-.feature-card:hover .absolute {
-    opacity: 0;
+.frosted-glass {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
 }
 
 /* Styles pour le formulaire d'inscription */
@@ -148,19 +174,15 @@ h1, h2, h3, h4 {
     }
 }
 
-.bg-black {
-    background-color: #000;
-}
-
-.bg-opacity-75 {
-    background-color: rgba(0, 0, 0, 0.75);
+.bg-opacity-90 {
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .bg-opacity-50 {
-    background-color: rgba(0, 0, 0, 0.50);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .backdrop-blur-md {
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
