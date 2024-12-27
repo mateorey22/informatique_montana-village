@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours d'Informatique Montana-Village</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide-static@0.298.0/umd/lucide-static.js"></script>
+
+</head>
+<body class="min-h-screen bg-gray-50">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold">Cours d'Informatique Montana-Village</h1>
+            <p class="text-xl mt-2">Restez connectés avec le monde d'aujourd'hui !</p>
+        </div>
+    </header>
+
+    <nav class="bg-white shadow-lg">
+        <div class="container mx-auto p-4">
+            <div class="tabs w-full">
+                <div class="tabs-list grid w-full grid-cols-4">
+                    <button class="tab flex items-center gap-2" data-target="accueil">
+                        <i data-lucide="home" class="w-4 h-4"></i>
+                        Accueil
+                    </button>
+                    <button class="tab flex items-center gap-2" data-target="inscription">
+                        <i data-lucide="user-plus" class="w-4 h-4"></i>
+                        Inscription
+                    </button>
+                    <button class="tab flex items-center gap-2" data-target="services">
+                        <i data-lucide="book" class="w-4 h-4"></i>
+                        Services
+                    </button>
+                    <button class="tab flex items-center gap-2" data-target="tarifs">
+                        <i data-lucide="credit-card" class="w-4 h-4"></i>
+                        Tarifs
+                    </button>
+                </div>
+
+                <div class="tabs-content hidden" id="inscription">
+                    <div class="card mt-6">
+                        <div class="card-header">
+                            <h2 class="card-title text-2xl">Formulaire d'inscription</h2>
+                        </div>
+                        <div class="card-content">
+                            <form id="inscriptionForm" class="space-y-8">
+                                <div class="space-y-4">
+                                    <h3 class="text-xl font-semibold">Informations Personnelles</h3>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div>
+                                            <label for="nom">Nom et Prénom</label>
+                                            <input id="nom" class="input text-lg" />
+                                        </div>
+                                        <div>
+                                            <label for="email">Email</label>
+                                            <input id="email" type="email" class="input text-lg" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-4">
+                                    <h3 class="text-xl font-semibold">Appareils et Systèmes</h3>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="flex items-center space-x-2">
+                                            <input type="checkbox" id="ordinateurPortable" class="checkbox" />
+                                            <label for="ordinateurPortable">Ordinateur Portable</label>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <input type="checkbox" id="ordinateurBureau" class="checkbox" />
+                                            <label for="ordinateurBureau">Ordinateur de Bureau</label>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <input type="checkbox" id="tablette" class="checkbox" />
+                                            <label for="tablette">Tablette</label>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <input type="checkbox" id="smartphone" class="checkbox" />
+                                            <label for="smartphone">Smartphone</label>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <input type="checkbox" id="montreConnectee" class="checkbox" />
+                                            <label for="montreConnectee">Montre Connectée</label>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <input type="checkbox" id="televisionConnectee" class="checkbox" />
+                                            <label for="televisionConnectee">Télévision Connectée</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-4">
+                                    <h3 class="text-xl font-semibold">Niveau et Objectifs</h3>
+                                    <div>
+                                        <label class="text-lg">Niveau de connaissance</label>
+                                        <div class="radio-group space-y-2">
+                                            <div class="flex items-center space-x-2">
+                                                <input type="radio" id="debutant" name="niveau" value="debutant" class="radio" />
+                                                <label for="debutant">Grand débutant</label>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <input type="radio" id="intermediaire" name="niveau" value="intermediaire" class="radio" />
+                                                <label for="intermediaire">Intermédiaire</label>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <input type="radio" id="avance" name="niveau" value="avance" class="radio" />
+                                                <label for="avance">Avancé</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-4">
+                                    <h3 class="text-xl font-semibold">Disponibilités</h3>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="flex items-center space-x-2">
+                                            <input type="checkbox" id="lundi" class="checkbox" />
+                                            <label for="lundi" class="capitalize">lundi</label>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <input type="checkbox" id="mardi" class="checkbox" />
+                                            <label for="mardi" class="capitalize">mardi</label>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <input type="checkbox" id="mercredi" class="checkbox" />
+                                            <label for="mercredi" class="capitalize">mercredi</label>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <input type="checkbox" id="jeudi" class="checkbox" />
+                                            <label for="jeudi" class="capitalize">jeudi</label>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <input type="checkbox" id="vendredi" class="checkbox" />
+                                            <label for="vendredi" class="capitalize">vendredi</label>
+                                        </div>
+                                    </div>
+                                    <select id="plageHoraire" class="select w-full">
+                                        <option value="">Choisir une plage horaire</option>
+                                        <option value="matin">Matin (8h-12h)</option>
+                                        <option value="aprem">Après-midi (13h-17h)</option>
+                                        <option value="soir">Soir (17h-19h)</option>
+                                    </select>
+                                </div>
+
+                                <div class="space-y-4">
+                                    <h3 class="text-xl font-semibold">Remarques additionnelles</h3>
+                                    <textarea id="remarques" placeholder="Vos besoins spécifiques ou questions" class="textarea min-h-[100px]"></textarea>
+                                </div>
+
+                                <button type="submit" class="button w-full text-lg">
+                                    Envoyer ma demande d'inscription
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabs-content hidden" id="accueil">
+                    <p>Bienvenue sur le site des cours d'informatique de Montana-Village !</p>
+                </div>
+
+                <div class="tabs-content hidden" id="services">
+                    <p>Découvrez nos différents services...</p>
+                </div>
+
+                <div class="tabs-content hidden" id="tarifs">
+                    <p>Consultez nos tarifs...</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
