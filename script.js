@@ -61,8 +61,8 @@ form.addEventListener('submit', (event) => {
     })
     .then(data => {
         console.log(data); // Affiche la réponse du serveur (succès ou erreur)
-        inscriptionMessage.classList.remove('hidden'); // Affiche le message de confirmation
-        inscriptionError.classList.add('hidden'); // Cache le message d'erreur
+        inscriptionMessage.classList.remove('hidden'); //
+          inscriptionError.classList.add('hidden'); // Cache le message d'erreur
         form.reset(); // Réinitialise le formulaire
 
         // Masquer le message de confirmation après 5 secondes
