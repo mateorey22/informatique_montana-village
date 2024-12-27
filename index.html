@@ -4,57 +4,240 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cours d'Informatique Montana-Village</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/lucide-static@0.298.0/umd/lucide-static.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/24accb5773.js" crossorigin="anonymous"></script>
 </head>
-<body class="min-h-screen bg-blue-50 font-inter text-gray-800">
+<body class="min-h-screen bg-gray-100 font-sans flex flex-col">
 
-    <header class="bg-blue-500 bg-opacity-80 backdrop-blur-sm py-6">
-        <div class="container mx-auto text-center text-white">
-            <h1 class="text-4xl font-bold tracking-tight md:text-5xl animate-fade-in">Cours d'Informatique Montana-Village</h1>
-            <p class="text-lg mt-3 md:text-xl animate-fade-in animate-delay-300">Restez connectés avec le monde d'aujourd'hui !</p>
+    <header class="bg-gray-200 text-gray-700 p-4 shadow-md">
+        <div class="container mx-auto flex items-center justify-center">
+            <h1 class="text-3xl font-bold text-center">
+                <i class="fas fa-laptop-code text-blue-500 mr-2"></i> Cours d'Informatique Montana-Village
+            </h1>
         </div>
     </header>
 
-    <nav class="bg-white shadow-lg sticky top-0 z-50 py-4">
+    <nav class="bg-white shadow-lg sticky top-0 z-50 py-2">
         <div class="container mx-auto">
-            <div class="tabs">
-                <ul class="flex flex-wrap justify-center space-x-6">
-                    <li><button class="tab active" data-target="accueil">Accueil</button></li>
-                    <li><button class="tab" data-target="inscription">Inscription</button></li>
-                    <li><button class="tab" data-target="services">Services</button></li>
-                    <li><button class="tab" data-target="tarifs">Tarifs</button></li>
-                </ul>
+            <div class="tabs w-full flex justify-center">
+                <div class="tabs-list flex space-x-8">
+                    <button class="tab flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300" data-target="accueil">
+                        <i class="fas fa-home"></i> Accueil
+                    </button>
+                    <button class="tab flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300" data-target="inscription">
+                        <i class="fas fa-user-plus"></i> Inscription
+                    </button>
+                    <button class="tab flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300" data-target="services">
+                        <i class="fas fa-book"></i> Services
+                    </button>
+                    <button class="tab flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300" data-target="tarifs">
+                        <i class="fas fa-credit-card"></i> Tarifs
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
-
-    <main class="container mx-auto py-12">
+    <main class="flex-grow">
         <div class="tabs-content" id="accueil">
-            <section class="hero py-20 px-4 rounded-lg overflow-hidden relative">
-              <img src="hero-image.jpg" alt="Hero Image" class="absolute inset-0 w-full h-full object-cover opacity-50">  </div>
-        <div class="tabs-content hidden" id="inscription">
-            <div class="container mx-auto bg-white p-8 rounded-lg shadow-md">
-
+            <section class="hero bg-blue-500 text-white py-20 px-4 relative overflow-hidden">
+                <div class="container mx-auto text-center relative z-10">
+                    <h2 class="text-4xl font-bold mb-4 animate-fade-up">Apprenez l'informatique à votre rythme</h2>
+                    <p class="text-xl mb-8 animate-fade-up animate-delay-500">Des cours adaptés à tous les niveaux, du grand débutant à l'utilisateur avancé.</p>
+                    <button class="bg-white text-blue-500 px-8 py-3 rounded-lg font-bold text-lg hover:bg-blue-100 transition-colors duration-300 animate-fade-up animate-delay-1000" data-scroll-to="inscription">Inscrivez-vous dès maintenant !</button>
+                </div>
+                <div class="absolute inset-0 z-0 flex items-center justify-center">
+                    <i class="fas fa-laptop-code text-gray-300 opacity-20 text-9xl"></i>
+                </div>
+            </section>
+            <section class="features py-16 px-4">
+                <div class="container mx-auto">
+                    <h3 class="text-3xl font-bold text-center mb-12 text-gray-700">Pourquoi choisir nos cours ?</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="feature-card bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-xl">
+                            <i class="fas fa-users text-blue-500 text-4xl mb-4"></i>
+                            <h4 class="text-xl font-bold mb-2 text-gray-700">Petits groupes</h4>
+                            <p class="text-gray-600 text-center">Un accompagnement personnalisé pour une meilleure progression.</p>
+                        </div>
+                        <div class="feature-card bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-xl">
+                            <i class="fas fa-clock text-blue-500 text-4xl mb-4"></i>
+                            <h4 class="text-xl font-bold mb-2 text-gray-700">Horaires flexibles</h4>
+                            <p class="text-gray-600 text-center">Des cours adaptés à votre emploi du temps.</p>
+                        </div>
+                        <div class="feature-card bg-white rounded-lg shadow-lg p-6 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-xl">
+                            <i class="fas fa-book-open text-blue-500 text-4xl mb-4"></i>
+                            <h4 class="text-xl font-bold mb-2 text-gray-700">Contenu pratique</h4>
+                            <p class="text-gray-600 text-center">Des exercices concrets pour une application immédiate des connaissances.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
-
-        <div class="tabs-content hidden" id="tarifs">
+        <div class="tabs-content hidden p-4" id="inscription">
             <div class="container mx-auto">
-                <h2 class="text-3xl font-bold text-center my-8">Nos Tarifs</h2>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-700">Formulaire d'inscription</h2>
+                    <form id="inscriptionForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="nom" class="block text-gray-700 mb-2">Nom et Prénom</label>
+                                <input id="nom" type="text" class="input w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input id="email" type="email" class="input w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Appareils utilisés</label>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                <label class="flex items-center space-x-2">
+                                    <input type="checkbox" id="ordinateurPortable" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="text-gray-700">Ordinateur Portable</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="checkbox" id="ordinateurBureau" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="text-gray-700">Ordinateur de Bureau</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="checkbox" id="tablette" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="text-gray-700">Tablette</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="checkbox" id="smartphone" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="text-gray-700">Smartphone</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="checkbox" id="montreConnectee" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="text-gray-700">Montre Connectée</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="checkbox" id="televisionConnectee" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="text-gray-700">Télévision Connectée</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Niveau de connaissance</label>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center space-x-2">
+                                    <input type="radio" id="debutant" name="niveau" value="debutant" class="form-radio h-5 w-5 text-blue-600" required>
+                                    <span class="text-gray-700">Grand débutant</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="radio" id="intermediaire" name="niveau" value="intermediaire" class="form-radio h-5 w-5 text-blue-600">
+                                    <span class="text-gray-700">Intermédiaire</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="radio" id="avance" name="niveau" value="avance" class="form-radio h-5 w-5 text-blue-600">
+                                    <span class="text-gray-700">Avancé</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Disponibilités</label>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+                                <label class="flex items-center space-x-2">
+                                    <input type="checkbox" id="lundi" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="text-gray-700">Lundi</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="checkbox" id="mardi" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="text-gray-700">Mardi</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="checkbox" id="mercredi" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="text-gray-700">Mercredi</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="checkbox" id="jeudi" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="text-gray-700">Jeudi</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="checkbox" id="vendredi" class="form-checkbox h-5 w-5 text-blue-600">
+                                    <span class="text-gray-700">Vendredi</span>
+                                </label>
+                            </div>
+                            <select id="plageHoraire" class="input w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Choisir une plage horaire</option>
+                                <option value="matin">Matin (8h-12h)</option>
+                                <option value="aprem">Après-midi (13h-17h)</option>
+                                <option value="soir">Soir (17h-19h)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="remarques" class="block text-gray-700 mb-2">Remarques additionnelles</label>
+                            <textarea id="remarques" class="input w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition-colors duration-300">
+                            <i class="fas fa-paper-plane mr-2"></i> Envoyer ma demande
+                        </button>
+                        <div id="inscription-message" class="mt-4 text-green-600 font-bold hidden">
+                            <i class="fas fa-check-circle mr-2"></i> Inscription réussie !
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
+        <div class="tabs-content hidden p-4" id="services">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-8 text-gray-700">Nos Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                        <i class="fas fa-user-friends text-blue-500 text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-700">Cours Collectifs</h3>
+                        <p class="text-gray-600 mb-4">Apprenez en groupe dans une ambiance conviviale et profitez de l'émulation collective.</p>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Petits groupes de niveau homogène</li>
+                            <li>Échanges et entraide entre participants</li>
+                            <li>Ateliers pratiques et ludiques</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                        <i class="fas fa-user text-blue-500 text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-700">Cours Individuels</h3>
+                        <p class="text-gray-600 mb-4">Bénéficiez d'un accompagnement personnalisé et avancez à votre propre rythme.</p>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Diagnostic précis de vos besoins</li>
+                            <li>Plan de formation sur mesure</li>
+                            <li>Suivi individuel et régulier</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs-content hidden p-4" id="tarifs">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-8 text-gray-700">Nos Tarifs</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                        <i class="fas fa-user-friends text-blue-500 text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-700">Cours Collectifs</h3>
+                        <p class="text-gray-700 font-bold text-xl mb-2">25€ / heure</p>
+                        <p class="text-gray-600">Tarif par personne, minimum 3 participants.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                        <i class="fas fa-user text-blue-500 text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-700">Cours Individuels</h3>
+                        <p class="text-gray-700 font-bold text-xl mb-2">40€ / heure</p>
+                        <p class="text-gray-600">Tarif dégressif à partir de 10 heures.</p>
+                    </div>
+                </div>
+                <p class="mt-8 text-center text-gray-600">N'hésitez pas à nous contacter pour un devis personnalisé.</p>
             </div>
         </div>
     </main>
 
-    <footer class="bg-gray-100 py-8">
-        <div class="container mx-auto text-center text-gray-600">
-            <p>&copy; 2023 Cours d'Informatique Montana-Village</p>
+    <footer class="bg-gray-200 py-8 mt-16">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-600">&copy; 2023 Cours d'Informatique Montana-Village | <a href="#" class="text-blue-500 hover:underline">Mentions légales</a></p>
         </div>
     </footer>
 
-    <script src="script.js"></script> <script src="form.js"></script> </body>
+    <script src="script.js"></script>
+</body>
 </html>
