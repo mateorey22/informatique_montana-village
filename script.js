@@ -42,7 +42,8 @@ form.addEventListener('submit', (event) => {
             vendredi: document.getElementById('vendredi').checked
         },
         plageHoraire: document.getElementById('plageHoraire').value,
-        remarques};
+        remarques: document.getElementById('remarques').value
+    };
 
     // Enregistrement des données dans un fichier texte (côté serveur)
     fetch('enregistrer_inscription.php', {
