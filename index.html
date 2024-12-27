@@ -7,33 +7,33 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body class="min-h-screen bg-gray-100 text-gray-800 font-sans flex flex-col overflow-x-hidden">
+<body class="min-h-screen bg-gray-900 text-white font-sans flex flex-col overflow-x-hidden">
+    <div id="background-animation" class="fixed inset-0 z-0"></div>
 
-    <header class="bg-white bg-opacity-90 backdrop-blur-md text-gray-700 p-4 shadow-md">
+    <header class="bg-black bg-opacity-50 text-white p-4 shadow-md z-10">
         <div class="container mx-auto flex items-center justify-center">
-            <h1 class="text-4xl font-bold text-center" style="font-family: 'Source Serif Pro', serif;">
-                <i class="fas fa-laptop-code text-blue-500 mr-2 animate-pulse"></i> Cours d'Informatique Montana-Village
+            <h1 class="text-4xl font-bold text-center" style="font-family: 'Montserrat', sans-serif;">
+                <i class="fas fa-laptop-code text-teal-400 mr-2 animate-pulse"></i> Cours d'Informatique Montana-Village
             </h1>
         </div>
     </header>
 
-    <nav class="bg-white bg-opacity-90 backdrop-blur-md sticky top-0 z-50 py-2 shadow-sm">
+    <nav class="bg-black bg-opacity-50 backdrop-blur-md sticky top-0 z-50 py-2 shadow-md">
         <div class="container mx-auto">
             <div class="tabs w-full flex justify-center">
                 <div class="tabs-list flex space-x-10">
-                    <button class="tab flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors duration-300 text-lg font-medium" data-target="accueil">
+                    <button class="tab flex items-center gap-3 text-gray-300 hover:text-teal-400 transition-colors duration-300 text-lg font-medium" data-target="accueil">
                         <i class="fas fa-home text-xl"></i> Accueil
                     </button>
-                    <button class="tab flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors duration-300 text-lg font-medium" data-target="inscription">
+                    <button class="tab flex items-center gap-3 text-gray-300 hover:text-teal-400 transition-colors duration-300 text-lg font-medium" data-target="inscription">
                         <i class="fas fa-user-plus text-xl"></i> Inscription
                     </button>
-                    <button class="tab flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors duration-300 text-lg font-medium" data-target="services">
+                    <button class="tab flex items-center gap-3 text-gray-300 hover:text-teal-400 transition-colors duration-300 text-lg font-medium" data-target="services">
                         <i class="fas fa-book text-xl"></i> Services
                     </button>
-                    <button class="tab flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors duration-300 text-lg font-medium" data-target="tarifs">
+                    <button class="tab flex items-center gap-3 text-gray-300 hover:text-teal-400 transition-colors duration-300 text-lg font-medium" data-target="tarifs">
                         <i class="fas fa-credit-card text-xl"></i> Tarifs
                     </button>
                 </div>
@@ -41,46 +41,41 @@
         </div>
     </nav>
 
-    <main class="flex-grow">
+    <main class="flex-grow relative z-10">
         <div class="tabs-content active" id="accueil">
-            <section class="hero bg-gray-200 text-gray-800 py-24 px-4 relative overflow-hidden">
-                <div class="container mx-auto text-center relative z-10">
-                    <h2 class="text-5xl font-bold mb-6" style="font-family: 'Source Serif Pro', serif;">L'informatique à Portée de Main</h2>
-                    <p class="text-2xl mb-10" style="font-family: 'Source Sans Pro', sans-serif;">Des cours particuliers pour tous, débutants ou confirmés.</p>
-                    <button class="bg-blue-500 text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-blue-600 transition-colors duration-300 shadow-lg" data-scroll-to="inscription">
-                        <i class="fas fa-rocket mr-3"></i> Je m'inscris !
+            <section class="hero text-white py-24 px-4">
+                <div class="container mx-auto text-center">
+                    <h2 class="text-5xl font-bold mb-6 leading-tight" style="font-family: 'Montserrat', sans-serif;">Maîtrisez l'Informatique à Votre Rythme</h2>
+                    <p class="text-2xl mb-10" style="font-family: 'Montserrat', sans-serif;">Des cours individuels conçus pour tous les niveaux.</p>
+                    <button class="bg-teal-500 text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-teal-600 transition-colors duration-300 shadow-lg" data-scroll-to="inscription">
+                        <i class="fas fa-rocket mr-3"></i> Inscrivez-vous !
                     </button>
-                </div>
-                <div class="absolute inset-0 z-0 flex items-center justify-around opacity-20">
-                    <i class="fas fa-cogs text-gray-300 text-9xl transform rotate-45"></i>
-                    <i class="fas fa-mouse text-gray-300 text-9xl"></i>
-                    <i class="fas fa-keyboard text-gray-300 text-9xl transform -rotate-45"></i>
                 </div>
             </section>
             
             <section class="features py-20 px-4">
                 <div class="container mx-auto">
-                    <h3 class="text-4xl font-bold text-center mb-16 text-gray-800" style="font-family: 'Source Serif Pro', serif;">Pourquoi Choisir Nos Cours ?</h3>
+                    <h3 class="text-4xl font-bold text-center mb-16 text-white" style="font-family: 'Montserrat', sans-serif;">Pourquoi Choisir Nos Cours ?</h3>
                     <div class="card-container grid grid-cols-1 md:grid-cols-3 gap-12">
-                        <div class="feature-card frosted-glass">
+                        <div class="feature-card glass-effect">
                             <div class="card-content">
-                                <i class="fas fa-user text-blue-500 text-6xl mb-6"></i>
-                                <h4 class="text-3xl font-bold mb-4 text-gray-800" style="font-family: 'Source Serif Pro', serif;">Suivi Personnel</h4>
-                                <p class="text-gray-700 text-center" style="font-family: 'Source Sans Pro', sans-serif;">Un accompagnement sur-mesure pour une progression optimale.</p>
+                                <i class="fas fa-user text-teal-400 text-6xl mb-6"></i>
+                                <h4 class="text-3xl font-bold mb-4 text-white" style="font-family: 'Montserrat', sans-serif;">Accompagnement Individuel</h4>
+                                <p class="text-gray-300 text-center" style="font-family: 'Montserrat', sans-serif;">Un suivi personnalisé et adapté à vos besoins spécifiques.</p>
                             </div>
                         </div>
-                        <div class="feature-card frosted-glass">
+                        <div class="feature-card glass-effect">
                             <div class="card-content">
-                                <i class="fas fa-clock text-blue-500 text-6xl mb-6"></i>
-                                <h4 class="text-3xl font-bold mb-4 text-gray-800" style="font-family: 'Source Serif Pro', serif;">Horaires Flexibles</h4>
-                                <p class="text-gray-700 text-center" style="font-family: 'Source Sans Pro', sans-serif;">Des cours qui s'adaptent à votre planning, pas l'inverse.</p>
+                                <i class="fas fa-clock text-teal-400 text-6xl mb-6"></i>
+                                <h4 class="text-3xl font-bold mb-4 text-white" style="font-family: 'Montserrat', sans-serif;">Flexibilité des Horaires</h4>
+                                <p class="text-gray-300 text-center" style="font-family: 'Montserrat', sans-serif;">Des sessions de cours adaptées à votre emploi du temps.</p>
                             </div>
                         </div>
-                        <div class="feature-card frosted-glass">
+                        <div class="feature-card glass-effect">
                             <div class="card-content">
-                                <i class="fas fa-book-open text-blue-500 text-6xl mb-6"></i>
-                                <h4 class="text-3xl font-bold mb-4 text-gray-800" style="font-family: 'Source Serif Pro', serif;">Méthode Pratique</h4>
-                                <p class="text-gray-700 text-center" style="font-family: 'Source Sans Pro', sans-serif;">Des exercices concrets pour une mise en pratique immédiate.</p>
+                                <i class="fas fa-book-open text-teal-400 text-6xl mb-6"></i>
+                                <h4 class="text-3xl font-bold mb-4 text-white" style="font-family: 'Montserrat', sans-serif;">Approche Pratique</h4>
+                                <p class="text-gray-300 text-center" style="font-family: 'Montserrat', sans-serif;">Des exercices concrets pour une mise en pratique immédiate.</p>
                             </div>
                         </div>
                     </div>
@@ -90,90 +85,90 @@
 
         <div class="tabs-content hidden p-4" id="inscription">
             <div class="container mx-auto">
-                <div class="frosted-glass p-8 rounded-3xl">
-                    <h2 class="text-3xl font-bold mb-6 text-gray-800" style="font-family: 'Source Serif Pro', serif;">Formulaire d'inscription</h2>
+                <div class="glass-effect p-8 rounded-3xl shadow-lg">
+                    <h2 class="text-3xl font-bold mb-6 text-white" style="font-family: 'Montserrat', sans-serif;">Formulaire d'inscription</h2>
                     <form id="inscriptionForm" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="nom" class="block text-gray-700 mb-2" style="font-family: 'Source Sans Pro', sans-serif;">Nom et Prénom</label>
-                                <input id="nom" type="text" class="input w-full border border-gray-300 bg-white bg-opacity-50 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800" required>
+                                <label for="nom" class="block text-gray-300 mb-2" style="font-family: 'Montserrat', sans-serif;">Nom et Prénom</label>
+                                <input id="nom" type="text" class="input w-full border border-gray-600 bg-black bg-opacity-50 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent text-white" required>
                             </div>
                             <div>
-                                <label for="email" class="block text-gray-700 mb-2" style="font-family: 'Source Sans Pro', sans-serif;">Email</label>
-                                <input id="email" type="email" class="input w-full border border-gray-300 bg-white bg-opacity-50 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800" required>
+                                <label for="email" class="block text-gray-300 mb-2" style="font-family: 'Montserrat', sans-serif;">Email</label>
+                                <input id="email" type="email" class="input w-full border border-gray-600 bg-black bg-opacity-50 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent text-white" required>
                             </div>
                         </div>
                         <div>
-                            <label class="block text-gray-700 mb-2" style="font-family: 'Source Sans Pro', sans-serif;">Appareils utilisés</label>
+                            <label class="block text-gray-300 mb-2" style="font-family: 'Montserrat', sans-serif;">Appareils utilisés</label>
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="ordinateurPortable" class="form-checkbox h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Ordinateur Portable</span>
+                                    <input type="checkbox" id="ordinateurPortable" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Ordinateur Portable</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="ordinateurBureau" class="form-checkbox h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Ordinateur de Bureau</span>
+                                    <input type="checkbox" id="ordinateurBureau" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Ordinateur de Bureau</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="tablette" class="form-checkbox h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Tablette</span>
+                                    <input type="checkbox" id="tablette" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Tablette</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="smartphone" class="form-checkbox h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Smartphone</span>
+                                    <input type="checkbox" id="smartphone" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Smartphone</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="montreConnectee" class="form-checkbox h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Montre Connectée</span>
+                                    <input type="checkbox" id="montreConnectee" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Montre Connectée</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="televisionConnectee" class="form-checkbox h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Télévision Connectée</span>
+                                    <input type="checkbox" id="televisionConnectee" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Télévision Connectée</span>
                                 </label>
                             </div>
                         </div>
                         <div>
-                            <label class="block text-gray-700 mb-2" style="font-family: 'Source Sans Pro', sans-serif;">Niveau de connaissance</label>
+                            <label class="block text-gray-300 mb-2" style="font-family: 'Montserrat', sans-serif;">Niveau de connaissance</label>
                             <div class="flex space-x-4">
                                 <label class="flex items-center space-x-3">
-                                    <input type="radio" id="debutant" name="niveau" value="debutant" class="form-radio h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300" required>
-                                    <span class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Grand débutant</span>
+                                    <input type="radio" id="debutant" name="niveau" value="debutant" class="form-radio h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600" required>
+                                    <span class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Grand débutant</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="radio" id="intermediaire" name="niveau" value="intermediaire" class="form-radio h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300">
-                                    <span class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Intermédiaire</span>
+                                    <input type="radio" id="intermediaire" name="niveau" value="intermediaire" class="form-radio h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600">
+                                    <span class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Intermédiaire</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="radio" id="avance" name="niveau" value="avance" class="form-radio h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300">
-                                    <span class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Avancé</span>
+                                    <input type="radio" id="avance" name="niveau" value="avance" class="form-radio h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600">
+                                    <span class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Avancé</span>
                                 </label>
                             </div>
                         </div>
                         <div>
-                            <label class="block text-gray-700 mb-2" style="font-family: 'Source Sans Pro', sans-serif;">Disponibilités</label>
+                            <label class="block text-gray-300 mb-2" style="font-family: 'Montserrat', sans-serif;">Disponibilités</label>
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="lundi" class="form-checkbox h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Lundi</span>
+                                    <input type="checkbox" id="lundi" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Lundi</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="mardi" class="form-checkbox h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Mardi</span>
+                                    <input type="checkbox" id="mardi" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Mardi</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="mercredi" class="form-checkbox h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Mercredi</span>
+                                    <input type="checkbox" id="mercredi" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Mercredi</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="jeudi" class="form-checkbox h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Jeudi</span>
+                                    <input type="checkbox" id="jeudi" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Jeudi</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="vendredi" class="form-checkbox h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Vendredi</span>
+                                    <input type="checkbox" id="vendredi" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Vendredi</span>
                                 </label>
                             </div>
-                            <select id="plageHoraire" class="input w-full border border-gray-300 bg-white bg-opacity-50 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800">
+                            <select id="plageHoraire" class="input w-full border border-gray-600 bg-black bg-opacity-50 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent text-white">
                                 <option value="">Choisir une plage horaire</option>
                                 <option value="matin">Matin (8h-12h)</option>
                                 <option value="aprem">Après-midi (13h-17h)</option>
@@ -181,16 +176,17 @@
                             </select>
                         </div>
                         <div>
-                            <label for="remarques" class="block text-gray-700 mb-2" style="font-family: 'Source Sans Pro', sans-serif;">Remarques additionnelles</label>
-                            <textarea id="remarques" class="input w-full border border-gray-300 bg-white bg-opacity-50 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800" rows="4"></textarea>
+                            <label for="remarques" class="block text-gray-300 mb-2" style="font-family: 'Montserrat', sans-serif;">Remarques additionnelles</label>
+                            <textarea id="remarques" class="input w-full border border-gray-600 bg-black bg-opacity-50 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent text-white" rows="4"></textarea>
                         </div>
-                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        <button type="submit" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2">
                             <i class="fas fa-paper-plane mr-2"></i> Envoyer ma demande
                         </button>
-                        <div id="inscription-message" class="mt-4 text-green-600 font-bold hidden" style="font-family: 'Source Sans Pro', sans-serif;">
+                        <div id="inscription-message" class="mt-4 text-green-500 font-bold hidden" style="font-family: 'Montserrat', sans-serif;">
                             <i class="fas fa-check-circle mr-2"></i> Inscription réussie !
                         </div>
-                        <div id="inscription-error" class="mt-4 text-red-600 font-bold hidden" style="font-family: 'Source Sans Pro', sans-serif;">
+                        </div>
+                        <div id="inscription-error" class="mt-4 text-red-500 font-bold hidden" style="font-family: 'Montserrat', sans-serif;">
                             <i class="fas fa-exclamation-triangle mr-2"></i> Erreur lors de l'inscription. Veuillez réessayer.
                         </div>
                     </form>
@@ -200,13 +196,13 @@
 
         <div class="tabs-content hidden p-4" id="services">
             <div class="container mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-8 text-gray-800" style="font-family: 'Source Serif Pro', serif;">Nos Services</h2>
+                <h2 class="text-3xl font-bold text-center mb-8 text-white" style="font-family: 'Montserrat', sans-serif;">Nos Services</h2>
                 <div class="grid grid-cols-1 md:grid-cols-1 gap-10">
-                    <div class="frosted-glass p-8 rounded-3xl flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl">
-                        <i class="fas fa-user text-blue-500 text-5xl mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-4 text-gray-800" style="font-family: 'Source Serif Pro', serif;">Cours Individuels</h3>
-                        <p class="text-gray-700 mb-4" style="font-family: 'Source Sans Pro', sans-serif;">Bénéficiez d'un accompagnement personnalisé et avancez à votre propre rythme.</p>
-                        <ul class="list-disc list-inside text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">
+                    <div class="glass-effect p-8 rounded-3xl flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl">
+                        <i class="fas fa-user text-teal-400 text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-white" style="font-family: 'Montserrat', sans-serif;">Cours Individuels</h3>
+                        <p class="text-gray-300 mb-4" style="font-family: 'Montserrat', sans-serif;">Bénéficiez d'un accompagnement personnalisé et avancez à votre propre rythme.</p>
+                        <ul class="list-disc list-inside text-gray-300" style="font-family: 'Montserrat', sans-serif;">
                             <li>Diagnostic précis de vos besoins</li>
                             <li>Plan de formation sur mesure</li>
                             <li>Suivi individuel et régulier</li>
@@ -218,23 +214,23 @@
 
         <div class="tabs-content hidden p-4" id="tarifs">
             <div class="container mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-8 text-gray-800" style="font-family: 'Source Serif Pro', serif;">Nos Tarifs</h2>
+                <h2 class="text-3xl font-bold text-center mb-8 text-white" style="font-family: 'Montserrat', sans-serif;">Nos Tarifs</h2>
                 <div class="grid grid-cols-1 md:grid-cols-1 gap-10">
-                    <div class="frosted-glass p-8 rounded-3xl flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl">
-                        <i class="fas fa-user text-blue-500 text-5xl mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-4 text-gray-800" style="font-family: 'Source Serif Pro', serif;">Cours Individuels</h3>
-                        <p class="text-gray-800 font-bold text-2xl mb-2" style="font-family: 'Source Sans Pro', sans-serif;">40€ / heure</p>
-                        <p class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">Tarif dégressif à partir de 10 heures.</p>
+                    <div class="glass-effect p-8 rounded-3xl flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl">
+                        <i class="fas fa-user text-teal-400 text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-white" style="font-family: 'Montserrat', sans-serif;">Cours Individuels</h3>
+                        <p class="text-white font-bold text-2xl mb-2" style="font-family: 'Montserrat', sans-serif;">40€ / heure</p>
+                        <p class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">Tarif dégressif à partir de 10 heures.</p>
                     </div>
                 </div>
-                <p class="mt-8 text-center text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">N'hésitez pas à nous contacter pour un devis personnalisé.</p>
+                <p class="mt-8 text-center text-gray-300" style="font-family: 'Montserrat', sans-serif;">N'hésitez pas à nous contacter pour un devis personnalisé.</p>
             </div>
         </div>
     </main>
 
-    <footer class="bg-white bg-opacity-90 backdrop-blur-md py-8 mt-16">
+    <footer class="bg-black bg-opacity-50 py-8 mt-16 z-10">
         <div class="container mx-auto text-center">
-            <p class="text-gray-700" style="font-family: 'Source Sans Pro', sans-serif;">&copy; 2023 Cours d'Informatique Montana-Village | <a href="#" class="text-blue-500 hover:underline">Mentions légales</a></p>
+            <p class="text-gray-300" style="font-family: 'Montserrat', sans-serif;">&copy; 2023 Cours d'Informatique Montana-Village | <a href="#" class="text-teal-400 hover:underline">Mentions légales</a></p>
         </div>
     </footer>
 
