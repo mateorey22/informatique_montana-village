@@ -1,11 +1,13 @@
 /* Styles spécifiques, complétant Tailwind CSS */
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 .tabs-list {
@@ -21,8 +23,8 @@ h1, h2, h3, h4 {
 }
 
 .tab.active {
-    border-color: #3b82f6; /* Blue-500 */
-    color: #3b82f6;
+    border-color: #20c997; /* Teal-400 */
+    color: #20c997;
 }
 
 .tabs-content {
@@ -49,49 +51,25 @@ h1, h2, h3, h4 {
 .select {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #374151;
     border-radius: 1rem;
     font-size: 1rem;
     margin-top: 0.25rem;
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .input:focus,
 .textarea:focus,
 .select:focus {
     outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+    border-color: #20c997;
+    box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.5);
 }
 
 .form-checkbox, 
 .form-radio {
     border-radius: 0.25rem;
-}
-
-/* Animations */
-.animate-fade-up {
-    animation: fade-up 0.5s ease-out;
-}
-
-.animate-delay-500 {
-    animation-delay: 0.5s;
-}
-
-.animate-delay-1000 {
-    animation-delay: 1s;
-}
-
-@keyframes fade-up {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Styles pour la page d'accueil */
@@ -104,18 +82,6 @@ h1, h2, h3, h4 {
 .hero .container {
     position: relative;
     z-index: 10;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: blur(3px);
-    z-index: 0;
 }
 
 .card-container {
@@ -131,12 +97,10 @@ h1, h2, h3, h4 {
     position: relative;
     border-radius: 1.5rem;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .feature-card:hover {
-    transform: rotateY(15deg);
+    transform: rotateY(15deg) scale(1.05);
     box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -147,15 +111,6 @@ h1, h2, h3, h4 {
     align-items: center;
     position: relative;
     z-index: 2;
-}
-
-.frosted-glass {
-    position: relative;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border-radius: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
 }
 
 /* Styles pour le formulaire d'inscription */
@@ -174,15 +129,90 @@ h1, h2, h3, h4 {
     }
 }
 
-.bg-opacity-90 {
-    background-color: rgba(255, 255, 255, 0.9);
+.glass-effect {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
 }
 
-.bg-opacity-50 {
-    background-color: rgba(255, 255, 255, 0.5);
+/* Animation des bulles */
+#background-animation {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.backdrop-blur-md {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  animation: float-up ease-in-out infinite;
+  filter: blur(0.5px);
+}
+
+.bubble:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  left: 10%;
+  animation-duration: 8s;
+}
+
+.bubble:nth-child(2) {
+  width: 40px;
+  height: 40px;
+  left: 20%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+  width: 50px;
+  height: 50px;
+  left: 65%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(5) {
+  width: 70px;
+  height: 70px;
+  left: 80%;
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(6) {
+  width: 30px;
+  height: 30px;
+  left: 90%;
+  animation-duration: 6s;
+  animation-delay: 2s;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
 }
