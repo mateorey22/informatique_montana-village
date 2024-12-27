@@ -24,10 +24,18 @@ $data .= "--------------------\n";
 
 // Enregistrer les données dans le fichier texte
 $file = fopen('inscriptions.txt', 'a'); // Ouvre le fichier en mode "ajout"
-fwrite($file, $data);
-fclose($file);
 
-// Répondre au client (succès)
-http_response_code(200); // OK
-echo "Inscription enregistrée avec succès !";
+// Vérifier si le fichier est ouvert correctement
+if ($file) {
+    fwrite($file, $data);
+    fclose($file);
+
+    // Répondre au client (succès)
+    http_response_code(200); // OK
+    echo "Inscription enregistrée avec succès !";
+} else {
+    // Gérer l'erreur d'ouverture du fichier
+    http_response_code(500); // Internal Server Error
+    echo "Erreur : Impossible d'ouvrir le fichier d'inscriptions.";
+}
 ?>
