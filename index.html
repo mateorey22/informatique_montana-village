@@ -6,35 +6,36 @@
     <title>Cours d'Informatique Montana-Village</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
-<body class="min-h-screen bg-gray-100 font-sans flex flex-col">
 
-    <header class="bg-gray-100 text-gray-700 p-4 shadow-md">
+</head>
+<body class="min-h-screen bg-black text-white font-sans flex flex-col">
+
+    <header class="bg-black bg-opacity-50 text-white p-4 shadow-md">
         <div class="container mx-auto flex items-center justify-center">
-            <h1 class="text-3xl font-bold text-center" style="font-family: 'Roboto Slab', serif;">
-                <i class="fas fa-laptop-code text-indigo-500 mr-2 animate-bounce"></i> Cours d'Informatique Montana-Village
+            <h1 class="text-4xl font-bold text-center" style="font-family: 'Roboto Slab', serif;">
+                <i class="fas fa-laptop-code text-teal-400 mr-2 animate-bounce"></i> Cours d'Informatique Montana-Village
             </h1>
         </div>
     </header>
 
-    <nav class="bg-white shadow-lg sticky top-0 z-50 py-2">
+    <nav class="bg-black bg-opacity-75 backdrop-blur-md sticky top-0 z-50 py-2">
         <div class="container mx-auto">
             <div class="tabs w-full flex justify-center">
-                <div class="tabs-list flex space-x-8">
-                    <button class="tab flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition-colors duration-300" data-target="accueil">
-                        <i class="fas fa-home"></i> Accueil
+                <div class="tabs-list flex space-x-10">
+                    <button class="tab flex items-center gap-3 text-gray-300 hover:text-teal-400 transition-colors duration-300 text-lg" data-target="accueil">
+                        <i class="fas fa-home text-xl"></i> Accueil
                     </button>
-                    <button class="tab flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition-colors duration-300" data-target="inscription">
-                        <i class="fas fa-user-plus"></i> Inscription
+                    <button class="tab flex items-center gap-3 text-gray-300 hover:text-teal-400 transition-colors duration-300 text-lg" data-target="inscription">
+                        <i class="fas fa-user-plus text-xl"></i> Inscription
                     </button>
-                    <button class="tab flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition-colors duration-300" data-target="services">
-                        <i class="fas fa-book"></i> Services
+                    <button class="tab flex items-center gap-3 text-gray-300 hover:text-teal-400 transition-colors duration-300 text-lg" data-target="services">
+                        <i class="fas fa-book text-xl"></i> Services
                     </button>
-                    <button class="tab flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition-colors duration-300" data-target="tarifs">
-                        <i class="fas fa-credit-card"></i> Tarifs
+                    <button class="tab flex items-center gap-3 text-gray-300 hover:text-teal-400 transition-colors duration-300 text-lg" data-target="tarifs">
+                        <i class="fas fa-credit-card text-xl"></i> Tarifs
                     </button>
                 </div>
             </div>
@@ -42,40 +43,43 @@
     </nav>
 
     <main class="flex-grow">
-        <div class="tabs-content" id="accueil">
-            <section class="hero bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-20 px-4 relative overflow-hidden">
+        <div class="tabs-content active" id="accueil">
+            <section class="hero bg-gradient-to-r from-black to-gray-800 text-white py-24 px-4 relative overflow-hidden">
                 <div class="container mx-auto text-center relative z-10">
-                    <h2 class="text-4xl font-bold mb-4 animate-fade-up" style="font-family: 'Roboto Slab', serif;">Apprenez l'informatique à votre rythme</h2>
-                    <p class="text-xl mb-8 animate-fade-up animate-delay-500" style="font-family: 'Poppins', sans-serif;">Des cours adaptés à tous les niveaux, du grand débutant à l'utilisateur avancé.</p>
-                    <button class="bg-white text-indigo-500 px-8 py-3 rounded-full font-bold text-lg hover:bg-indigo-100 hover:text-indigo-600 transition-colors duration-300 animate-fade-up animate-delay-1000 shadow-lg" data-scroll-to="inscription">
-                        <i class="fas fa-rocket mr-2"></i> Inscrivez-vous dès maintenant !
+                    <h2 class="text-5xl font-bold mb-6 animate-fade-up" style="font-family: 'Roboto Slab', serif;">Maîtrisez l'Informatique à Votre Rythme</h2>
+                    <p class="text-2xl mb-10 animate-fade-up animate-delay-500" style="font-family: 'Poppins', sans-serif;">Des cours individuels conçus pour tous les niveaux, du débutant complet à l'utilisateur expérimenté.</p>
+                    <button class="bg-teal-500 text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-teal-600 transition-colors duration-300 animate-fade-up animate-delay-1000 shadow-lg" data-scroll-to="inscription">
+                        <i class="fas fa-rocket mr-3"></i> Inscrivez-vous !
                     </button>
                 </div>
                 <div class="absolute inset-0 z-0 flex items-center justify-around opacity-20">
-                    <i class="fas fa-cogs text-gray-100 text-9xl transform rotate-45"></i>
-                    <i class="fas fa-mouse text-gray-100 text-9xl"></i>
-                    <i class="fas fa-keyboard text-gray-100 text-9xl transform -rotate-45"></i>
+                    <i class="fas fa-cogs text-gray-700 text-9xl transform rotate-45"></i>
+                    <i class="fas fa-mouse text-gray-700 text-9xl"></i>
+                    <i class="fas fa-keyboard text-gray-700 text-9xl transform -rotate-45"></i>
                 </div>
             </section>
             
-            <section class="features py-16 px-4">
+            <section class="features py-20 px-4">
                 <div class="container mx-auto">
-                    <h3 class="text-3xl font-bold text-center mb-12 text-gray-700" style="font-family: 'Roboto Slab', serif;">Pourquoi choisir nos cours ?</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                        <div class="feature-card bg-white rounded-xl shadow-lg p-8 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl hover:bg-indigo-50 hover:bg-opacity-50 backdrop-filter backdrop-blur-md">
-                            <i class="fas fa-users text-indigo-500 text-5xl mb-4"></i>
-                            <h4 class="text-2xl font-bold mb-4 text-gray-700" style="font-family: 'Roboto Slab', serif;">Petits groupes</h4>
-                            <p class="text-gray-600 text-center" style="font-family: 'Poppins', sans-serif;">Un accompagnement personnalisé pour une meilleure progression.</p>
+                    <h3 class="text-4xl font-bold text-center mb-16 text-white" style="font-family: 'Roboto Slab', serif;">Pourquoi Choisir Nos Cours ?</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                        <div class="feature-card relative overflow-hidden bg-gray-900 bg-opacity-75 backdrop-blur-md rounded-xl shadow-lg p-10 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl z-10">
+                            <div class="absolute inset-0 bg-black bg-opacity-50 rounded-xl transition-opacity duration-500 ease-in-out hover:opacity-0 z-0"></div>
+                            <i class="fas fa-user text-teal-400 text-6xl mb-6 relative z-10"></i>
+                            <h4 class="text-3xl font-bold mb-4 text-white relative z-10" style="font-family: 'Roboto Slab', serif;">Accompagnement Individuel</h4>
+                            <p class="text-gray-300 text-center relative z-10" style="font-family: 'Poppins', sans-serif;">Un suivi personnalisé et adapté à vos besoins spécifiques pour garantir une progression optimale.</p>
                         </div>
-                        <div class="feature-card bg-white rounded-xl shadow-lg p-8 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl hover:bg-indigo-50 hover:bg-opacity-50 backdrop-filter backdrop-blur-md">
-                            <i class="fas fa-clock text-indigo-500 text-5xl mb-4"></i>
-                            <h4 class="text-2xl font-bold mb-4 text-gray-700" style="font-family: 'Roboto Slab', serif;">Horaires flexibles</h4>
-                            <p class="text-gray-600 text-center" style="font-family: 'Poppins', sans-serif;">Des cours adaptés à votre emploi du temps.</p>
+                        <div class="feature-card relative overflow-hidden bg-gray-900 bg-opacity-75 backdrop-blur-md rounded-xl shadow-lg p-10 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl z-10">
+                            <div class="absolute inset-0 bg-black bg-opacity-50 rounded-xl transition-opacity duration-500 ease-in-out hover:opacity-0 z-0"></div>
+                            <i class="fas fa-clock text-teal-400 text-6xl mb-6 relative z-10"></i>
+                            <h4 class="text-3xl font-bold mb-4 text-white relative z-10" style="font-family: 'Roboto Slab', serif;">Flexibilité des Horaires</h4>
+                            <p class="text-gray-300 text-center relative z-10" style="font-family: 'Poppins', sans-serif;">Des sessions de cours adaptées à votre emploi du temps pour un apprentissage sans contraintes.</p>
                         </div>
-                        <div class="feature-card bg-white rounded-xl shadow-lg p-8 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl hover:bg-indigo-50 hover:bg-opacity-50 backdrop-filter backdrop-blur-md">
-                            <i class="fas fa-book-open text-indigo-500 text-5xl mb-4"></i>
-                            <h4 class="text-2xl font-bold mb-4 text-gray-700" style="font-family: 'Roboto Slab', serif;">Contenu pratique</h4>
-                            <p class="text-gray-600 text-center" style="font-family: 'Poppins', sans-serif;">Des exercices concrets pour une application immédiate des connaissances.</p>
+                        <div class="feature-card relative overflow-hidden bg-gray-900 bg-opacity-75 backdrop-blur-md rounded-xl shadow-lg p-10 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl z-10">
+                            <div class="absolute inset-0 bg-black bg-opacity-50 rounded-xl transition-opacity duration-500 ease-in-out hover:opacity-0 z-0"></div>
+                            <i class="fas fa-book-open text-teal-400 text-6xl mb-6 relative z-10"></i>
+                            <h4 class="text-3xl font-bold mb-4 text-white relative z-10" style="font-family: 'Roboto Slab', serif;">Approche Pratique</h4>
+                            <p class="text-gray-300 text-center relative z-10" style="font-family: 'Poppins', sans-serif;">Des exercices concrets et une mise en pratique immédiate pour une assimilation efficace des connaissances.</p>
                         </div>
                     </div>
                 </div>
@@ -84,107 +88,107 @@
 
         <div class="tabs-content hidden p-4" id="inscription">
             <div class="container mx-auto">
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <h2 class="text-2xl font-bold mb-6 text-gray-700" style="font-family: 'Roboto Slab', serif;">Formulaire d'inscription</h2>
+                <div class="bg-gray-900 bg-opacity-75 backdrop-blur-md rounded-xl shadow-lg p-8">
+                    <h2 class="text-3xl font-bold mb-6 text-white" style="font-family: 'Roboto Slab', serif;">Formulaire d'inscription</h2>
                     <form id="inscriptionForm" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="nom" class="block text-gray-700 mb-2" style="font-family: 'Poppins', sans-serif;">Nom et Prénom</label>
-                                <input id="nom" type="text" class="input w-full border border-gray-300 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" required>
+                                <label for="nom" class="block text-gray-300 mb-2" style="font-family: 'Poppins', sans-serif;">Nom et Prénom</label>
+                                <input id="nom" type="text" class="input w-full border border-gray-600 bg-black bg-opacity-50 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent text-white" required>
                             </div>
                             <div>
-                                <label for="email" class="block text-gray-700 mb-2" style="font-family: 'Poppins', sans-serif;">Email</label>
-                                <input id="email" type="email" class="input w-full border border-gray-300 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" required>
+                                <label for="email" class="block text-gray-300 mb-2" style="font-family: 'Poppins', sans-serif;">Email</label>
+                                <input id="email" type="email" class="input w-full border border-gray-600 bg-black bg-opacity-50 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent text-white" required>
                             </div>
                         </div>
                         <div>
-                            <label class="block text-gray-700 mb-2" style="font-family: 'Poppins', sans-serif;">Appareils utilisés</label>
+                            <label class="block text-gray-300 mb-2" style="font-family: 'Poppins', sans-serif;">Appareils utilisés</label>
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="ordinateurPortable" class="form-checkbox h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Poppins', sans-serif;">Ordinateur Portable</span>
+                                    <input type="checkbox" id="ordinateurPortable" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Ordinateur Portable</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="ordinateurBureau" class="form-checkbox h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Poppins', sans-serif;">Ordinateur de Bureau</span>
+                                    <input type="checkbox" id="ordinateurBureau" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Ordinateur de Bureau</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="tablette" class="form-checkbox h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Poppins', sans-serif;">Tablette</span>
+                                    <input type="checkbox" id="tablette" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Tablette</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="smartphone" class="form-checkbox h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Poppins', sans-serif;">Smartphone</span>
+                                    <input type="checkbox" id="smartphone" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Smartphone</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="montreConnectee" class="form-checkbox h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Poppins', sans-serif;">Montre Connectée</span>
+                                    <input type="checkbox" id="montreConnectee" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Montre Connectée</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="televisionConnectee" class="form-checkbox h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Poppins', sans-serif;">Télévision Connectée</span>
+                                    <input type="checkbox" id="televisionConnectee" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Télévision Connectée</span>
                                 </label>
                             </div>
                         </div>
                         <div>
-                            <label class="block text-gray-700 mb-2" style="font-family: 'Poppins', sans-serif;">Niveau de connaissance</label>
+                            <label class="block text-gray-300 mb-2" style="font-family: 'Poppins', sans-serif;">Niveau de connaissance</label>
                             <div class="flex space-x-4">
                                 <label class="flex items-center space-x-3">
-                                    <input type="radio" id="debutant" name="niveau" value="debutant" class="form-radio h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300" required>
-                                    <span class="text-gray-700" style="font-family: 'Poppins', sans-serif;">Grand débutant</span>
+                                    <input type="radio" id="debutant" name="niveau" value="debutant" class="form-radio h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600" required>
+                                    <span class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Grand débutant</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="radio" id="intermediaire" name="niveau" value="intermediaire" class="form-radio h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300">
-                                    <span class="text-gray-700" style="font-family: 'Poppins', sans-serif;">Intermédiaire</span>
+                                    <input type="radio" id="intermediaire" name="niveau" value="intermediaire" class="form-radio h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600">
+                                    <span class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Intermédiaire</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="radio" id="avance" name="niveau" value="avance" class="form-radio h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300">
-                                    <span class="text-gray-700" style="font-family: 'Poppins', sans-serif;">Avancé</span>
+                                    <input type="radio" id="avance" name="niveau" value="avance" class="form-radio h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600">
+                                    <span class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Avancé</span>
                                 </label>
                             </div>
                         </div>
                         <div>
-                            <label class="block text-gray-700 mb-2" style="font-family: 'Poppins', sans-serif;">Disponibilités</label>
+                            <label class="block text-gray-300 mb-2" style="font-family: 'Poppins', sans-serif;">Disponibilités</label>
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="lundi" class="form-checkbox h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Poppins', sans-serif;">Lundi</span>
+                                    <input type="checkbox" id="lundi" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Lundi</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="mardi" class="form-checkbox h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Poppins', sans-serif;">Mardi</span>
+                                    <input type="checkbox" id="mardi" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Mardi</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="mercredi" class="form-checkbox h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Poppins', sans-serif;">Mercredi</span>
+                                    <input type="checkbox" id="mercredi" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Mercredi</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="jeudi" class="form-checkbox h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Poppins', sans-serif;">Jeudi</span>
+                                    <input type="checkbox" id="jeudi" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Jeudi</span>
                                 </label>
                                 <label class="flex items-center space-x-3">
-                                    <input type="checkbox" id="vendredi" class="form-checkbox h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                    <span class="text-gray-700" style="font-family: 'Poppins', sans-serif;">Vendredi</span>
+                                    <input type="checkbox" id="vendredi" class="form-checkbox h-5 w-5 text-teal-400 focus:ring-teal-400 border-gray-600 rounded">
+                                    <span class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Vendredi</span>
                                 </label>
                             </div>
-                            <select id="plageHoraire" class="input w-full border border-gray-300 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            <select id="plageHoraire" class="input w-full border border-gray-600 bg-black bg-opacity-50 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent text-white">
                                 <option value="">Choisir une plage horaire</option>
                                 <option value="matin">Matin (8h-12h)</option>
                                 <option value="aprem">Après-midi (13h-17h)</option>
-                                <option value="soir">Soir (17h-19h)</option
-                                                                       </select>
+                                <option value="soir">Soir (17h-19h)</option>
+                            </select>
                         </div>
                         <div>
-                            <label for="remarques" class="block text-gray-700 mb-2" style="font-family: 'Poppins', sans-serif;">Remarques additionnelles</label>
-                            <textarea id="remarques" class="input w-full border border-gray-300 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" rows="4"></textarea>
+                            <label for="remarques" class="block text-gray-300 mb-2" style="font-family: 'Poppins', sans-serif;">Remarques additionnelles</label>
+                            <textarea id="remarques" class="input w-full border border-gray-600 bg-black bg-opacity-50 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent text-white" rows="4"></textarea>
                         </div>
-                        <button type="submit" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                        <button type="submit" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2">
                             <i class="fas fa-paper-plane mr-2"></i> Envoyer ma demande
                         </button>
-                        <div id="inscription-message" class="mt-4 text-green-600 font-bold hidden" style="font-family: 'Poppins', sans-serif;">
+                        <div id="inscription-message" class="mt-4 text-green-500 font-bold hidden" style="font-family: 'Poppins', sans-serif;">
                             <i class="fas fa-check-circle mr-2"></i> Inscription réussie !
                         </div>
-                        <div id="inscription-error" class="mt-4 text-red-600 font-bold hidden" style="font-family: 'Poppins', sans-serif;">
+                        <div id="inscription-error" class="mt-4 text-red-500 font-bold hidden" style="font-family: 'Poppins', sans-serif;">
                             <i class="fas fa-exclamation-triangle mr-2"></i> Erreur lors de l'inscription. Veuillez réessayer.
                         </div>
                     </form>
@@ -194,23 +198,13 @@
 
         <div class="tabs-content hidden p-4" id="services">
             <div class="container mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-8 text-gray-700" style="font-family: 'Roboto Slab', serif;">Nos Services</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl hover:bg-indigo-50 hover:bg-opacity-50 backdrop-filter backdrop-blur-md">
-                        <i class="fas fa-user-friends text-indigo-500 text-5xl mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-4 text-gray-700" style="font-family: 'Roboto Slab', serif;">Cours Collectifs</h3>
-                        <p class="text-gray-600 mb-4" style="font-family: 'Poppins', sans-serif;">Apprenez en groupe dans une ambiance conviviale et profitez de l'émulation collective.</p>
-                        <ul class="list-disc list-inside text-gray-600" style="font-family: 'Poppins', sans-serif;">
-                            <li>Petits groupes de niveau homogène</li>
-                            <li>Échanges et entraide entre participants</li>
-                            <li>Ateliers pratiques et ludiques</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl hover:bg-indigo-50 hover:bg-opacity-50 backdrop-filter backdrop-blur-md">
-                        <i class="fas fa-user text-indigo-500 text-5xl mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-4 text-gray-700" style="font-family: 'Roboto Slab', serif;">Cours Individuels</h3>
-                        <p class="text-gray-600 mb-4" style="font-family: 'Poppins', sans-serif;">Bénéficiez d'un accompagnement personnalisé et avancez à votre propre rythme.</p>
-                        <ul class="list-disc list-inside text-gray-600" style="font-family: 'Poppins', sans-serif;">
+                <h2 class="text-3xl font-bold text-center mb-8 text-white" style="font-family: 'Roboto Slab', serif;">Nos Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-10">
+                    <div class="bg-gray-900 bg-opacity-75 backdrop-blur-md rounded-xl shadow-lg p-8 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl">
+                        <i class="fas fa-user text-teal-400 text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-white" style="font-family: 'Roboto Slab', serif;">Cours Individuels</h3>
+                        <p class="text-gray-300 mb-4" style="font-family: 'Poppins', sans-serif;">Bénéficiez d'un accompagnement personnalisé et avancez à votre propre rythme.</p>
+                        <ul class="list-disc list-inside text-gray-300" style="font-family: 'Poppins', sans-serif;">
                             <li>Diagnostic précis de vos besoins</li>
                             <li>Plan de formation sur mesure</li>
                             <li>Suivi individuel et régulier</li>
@@ -222,29 +216,23 @@
 
         <div class="tabs-content hidden p-4" id="tarifs">
             <div class="container mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-8 text-gray-700" style="font-family: 'Roboto Slab', serif;">Nos Tarifs</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl">
-                        <i class="fas fa-user-friends text-indigo-500 text-5xl mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-4 text-gray-700" style="font-family: 'Roboto Slab', serif;">Cours Collectifs</h3>
-                        <p class="text-gray-700 font-bold text-2xl mb-2" style="font-family: 'Poppins', sans-serif;">25€ / heure</p>
-                        <p class="text-gray-600" style="font-family: 'Poppins', sans-serif;">Tarif par personne, minimum 3 participants.</p>
-                    </div>
-                    <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl">
-                        <i class="fas fa-user text-indigo-500 text-5xl mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-4 text-gray-700" style="font-family: 'Roboto Slab', serif;">Cours Individuels</h3>
-                        <p class="text-gray-700 font-bold text-2xl mb-2" style="font-family: 'Poppins', sans-serif;">40€ / heure</p>
-                        <p class="text-gray-600" style="font-family: 'Poppins', sans-serif;">Tarif dégressif à partir de 10 heures.</p>
+                <h2 class="text-3xl font-bold text-center mb-8 text-white" style="font-family: 'Roboto Slab', serif;">Nos Tarifs</h2>
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-10">
+                    <div class="bg-gray-900 bg-opacity-75 backdrop-blur-md rounded-xl shadow-lg p-8 flex flex-col items-center transition-transform hover:scale-105 hover:shadow-2xl">
+                        <i class="fas fa-user text-teal-400 text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-white" style="font-family: 'Roboto Slab', serif;">Cours Individuels</h3>
+                        <p class="text-white font-bold text-2xl mb-2" style="font-family: 'Poppins', sans-serif;">40€ / heure</p>
+                        <p class="text-gray-300" style="font-family: 'Poppins', sans-serif;">Tarif dégressif à partir de 10 heures.</p>
                     </div>
                 </div>
-                <p class="mt-8 text-center text-gray-600" style="font-family: 'Poppins', sans-serif;">N'hésitez pas à nous contacter pour un devis personnalisé.</p>
+                <p class="mt-8 text-center text-gray-300" style="font-family: 'Poppins', sans-serif;">N'hésitez pas à nous contacter pour un devis personnalisé.</p>
             </div>
         </div>
     </main>
 
-    <footer class="bg-gray-100 py-8 mt-16">
+    <footer class="bg-black bg-opacity-50 py-8 mt-16">
         <div class="container mx-auto text-center">
-            <p class="text-gray-600" style="font-family: 'Poppins', sans-serif;">&copy; 2023 Cours d'Informatique Montana-Village | <a href="#" class="text-indigo-500 hover:underline">Mentions légales</a></p>
+            <p class="text-gray-300" style="font-family: 'Poppins', sans-serif;">&copy; 2023 Cours d'Informatique Montana-Village | <a href="#" class="text-teal-400 hover:underline">Mentions légales</a></p>
         </div>
     </footer>
 
