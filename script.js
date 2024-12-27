@@ -2,16 +2,17 @@ const tabs = document.querySelectorAll('.tab');
 const tabsContents = document.querySelectorAll('.tabs-content');
 const form = document.getElementById('inscriptionForm');
 const inscriptionMessage = document.getElementById('inscription-message');
+const inscriptionError = document.getElementById('inscription-error');
 
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-        const target = document.getElementById(tab.dataset.target);
+        const target = tab.dataset.target;
 
         tabs.forEach(t => t.classList.remove('active'));
-        tabsContents.forEach(c => c.classList.add('hidden'));
+        tabsContents.forEach(c => c.classList.remove('active'));
 
         tab.classList.add('active');
-        target.classList.remove('hidden');
+        document.getElementById(target).classList.add('active');
     });
 });
 
@@ -52,10 +53,16 @@ form.addEventListener('submit', (event) => {
         },
         body: JSON.stringify(formData)
     })
-    .then(response => response.text())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erreur lors de l\'inscription.');
+        }
+        return response.text();
+    })
     .then(data => {
         console.log(data); // Affiche la réponse du serveur (succès ou erreur)
         inscriptionMessage.classList.remove('hidden'); // Affiche le message de confirmation
+        inscriptionError.classList.add('hidden'); // Cache le message d'erreur
         form.reset(); // Réinitialise le formulaire
 
         // Masquer le message de confirmation après 5 secondes
@@ -64,8 +71,9 @@ form.addEventListener('submit', (event) => {
         }, 5000);
     })
     .catch(error => {
-        console.error('Erreur lors de l\'enregistrement:', error);
-        // Afficher un message d'erreur à l'utilisateur si nécessaire
+        console.error(error);
+        inscriptionError.classList.remove('hidden'); // Affiche le message d'erreur
+        inscriptionMessage.classList.add('hidden'); // Cache le message de confirmation
     });
 });
 
